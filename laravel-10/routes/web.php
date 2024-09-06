@@ -32,3 +32,11 @@ Route::get('/about/{id?}', function ($id) { // id? oftional paramitter
 Route::get('/user/{id}', function ($id) {
     return 'User ID: ' . $id;
 });
+
+Route::get('/book/{id?}', function ($id = null) {
+    if ($id) {
+        return "<h1> The book name found</h1>";
+    } else {
+        return "<h1>The id is invalid</h1>";
+    }
+});
