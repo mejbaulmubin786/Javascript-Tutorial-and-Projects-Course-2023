@@ -28,3 +28,7 @@ Route::get('/contact/{id}', function ($id) {
 Route::get('/about/{id?}', function ($id) { // id? oftional paramitter
     return "<h1>about ID: " . $id . "</h1>";
 });
+
+Route::get('/user/{id}', function ($id) {
+    return 'User ID: ' . $id;
+});
