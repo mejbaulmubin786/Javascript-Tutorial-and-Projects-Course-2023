@@ -42,5 +42,5 @@ Route::get('/book/{id?}', function ($id = null) {
 });
 
 Route::get('/product/{category}/{id}/{name}', function ($category, $id, $name) {
-    return "Category: " . $category . ", Product ID: " . $id . ", Product Name: " . $name;
+    return "Category: " . $category . "<br>Product ID: " . $id . "<br>Product Name: " . $name;
 });
