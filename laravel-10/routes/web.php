@@ -48,3 +48,8 @@ Route::get('/product/{category}/{id}/{name}', function ($category, $id, $name) {
 Route::get('/order/{orderId}/{product}/{quantity}/{status}', function ($orderId, $product, $quantity, $status) {
     return "Order ID: " . $orderId . ", Product: " . $product . ", Quantity: " . $quantity . ", Status: " . $status;
 });
+
+Route::get('/books/{id}', function ($id) {
+    // ভিউ রিটার্ন করুন এবং প্যারামিটার হিসাবে $id পাঠান
+    return view('book', ['id' => $id]);
+});
