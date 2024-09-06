@@ -53,3 +53,12 @@ Route::get('/books/{id}', function ($id) {
     // ভিউ রিটার্ন করুন এবং প্যারামিটার হিসাবে $id পাঠান
     return view('book', ['id' => $id]);
 });
+// Add Constraints
+Route::get('/orders/{orderId}/{product}/{quantity}/{status}', function ($orderId, $product, $quantity, $status) {
+    return "Order ID: " . $orderId . ", Product: " . $product . ", Quantity: " . $quantity . ", Status: " . $status;
+})->where([
+    'orderId' => '[0-9]+', // orderId একটি সংখ্যা হতে হবে
+    'product' => '[a-zA-Z0-9\-_]+', // product একটি অক্ষরের স্ট্রিং হতে পারে, সাথে - এবং _ চিহ্ন থাকতে পারে
+    'quantity' => '[0-9]+', // quantity একটি সংখ্যা হতে হবে
+    'status' => '[a-zA-Z]+', // status একটি অক্ষরের স্ট্রিং হতে পারে
+]);
