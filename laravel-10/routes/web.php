@@ -40,3 +40,7 @@ Route::get('/book/{id?}', function ($id = null) {
         return "<h1>The id is invalid</h1>";
     }
 });
+
+Route::get('/product/{category}/{id}/{name}', function ($category, $id, $name) {
+    return "Category: " . $category . ", Product ID: " . $id . ", Product Name: " . $name;
+});
