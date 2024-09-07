@@ -87,3 +87,11 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 **ব্যাখ্যা:** এখানে `PostController` ক্লাসের `show` মেথড দ্বারা `/posts/{post}` URL টি `posts.show` নামক রুট দ্বারা চিহ্নিত করা হয়েছে।
 
 এগুলি হল Laravel এ নামকরণ করা রুটের কিছু প্রধান উদাহরণ। প্রতিটি উদাহরণের মাধ্যমে আপনি দেখতে পাচ্ছেন কিভাবে রুট তৈরি করা হয় এবং রুটের URL তৈরি করার জন্য `route` হেলপার ব্যবহার করা হয়।
+
+```php
+<a href="{{route('welcomepage')}}">Home</a>
+
+Route::get('/01', function () {
+return view('first');
+});
+```
