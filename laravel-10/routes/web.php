@@ -62,3 +62,11 @@ Route::get('/orders/{orderId}/{product}/{quantity}/{status}', function ($orderId
     'quantity' => '[0-9]+', // quantity একটি সংখ্যা হতে হবে
     'status' => '[a-zA-Z]+', // status একটি অক্ষরের স্ট্রিং হতে পারে
 ]);
+
+Route::get('/country/{countryname}', function (string $countryname) {
+    if ($countryname) {
+        return "<h1> My country name is {$countryname}";
+    } else {
+        return "<h1> country name not not found";
+    }
+})->whereIn('countryname', ['Bangladesh', 'USA', 'US']);
