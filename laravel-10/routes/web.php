@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('welcomepage');
+});
 
-Route::get('/01', function () {
-    return view('first');
+Route::get('/blog', function () {
+    return view('home');
 });

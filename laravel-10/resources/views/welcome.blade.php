@@ -1,4 +1,6 @@
-
+@include('header')
+@include('content')
+@include('footer')
 
 
 
