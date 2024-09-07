@@ -1,0 +1,1 @@
+<a href="{{route('welcomepage'}}">Home</a>
