@@ -123,3 +123,30 @@ Laravel এর মধ্যে যখন আপনি `@foreach` ডিরেক
 `$loop` ভেরিয়েবল খুবই সহায়ক, বিশেষ করে যখন আপনি লুপের অবস্থার উপর ভিত্তি করে কাস্টম লজিক প্রয়োগ করতে চান। উদাহরণস্বরূপ, আপনি প্রথম বা শেষ ইটারেশনে ভিন্ন স্টাইল বা কন্টেন্ট দিতে চাইলে `$loop->first` বা `$loop->last` ব্যবহার করতে পারেন।
 
 এটি Laravel-এর `@foreach` লুপের একটি শক্তিশালী এবং লজিক্যাল ফিচার যা কোডের কার্যকারিতা ও পড়ার সুবিধাকে বাড়ায়।
+
+Here's a table that lists all the loop variables in Laravel's `@foreach` directive along with their descriptions:
+
+| **Loop Variable**  | **Description**                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$loop->index`     | The zero-based index of the current iteration (starts at 0).                                           |
+| `$loop->iteration` | The one-based index of the current iteration (starts at 1).                                            |
+| `$loop->remaining` | The number of iterations remaining in the loop.                                                        |
+| `$loop->count`     | The total number of items in the loop.                                                                 |
+| `$loop->first`     | Returns `true` if the current iteration is the first one, otherwise `false`.                           |
+| `$loop->last`      | Returns `true` if the current iteration is the last one, otherwise `false`.                            |
+| `$loop->even`      | Returns `true` if the current iteration is an even number (2, 4, 6, ...).                              |
+| `$loop->odd`       | Returns `true` if the current iteration is an odd number (1, 3, 5, ...).                               |
+| `$loop->depth`     | The depth of the current loop in nested loops (1 for outermost loop, increases with each nested loop). |
+| `$loop->parent`    | Provides access to the loop variable of the parent loop when inside a nested loop.                     |
+
+### Explanation of Key Variables:
+
+- **`$loop->index`**: Useful when you need a zero-based index, which is common in array manipulation.
+- **`$loop->iteration`**: Handy when you want to display the iteration count starting from 1.
+- **`$loop->remaining`**: Allows you to track how many iterations are left, often used for showing progress or remaining items.
+- **`$loop->first` / `$loop->last`**: Helpful for applying special logic or styles to the first or last item in a list.
+- **`$loop->even` / `$loop->odd`**: Ideal for alternating styles between even and odd rows in a table.
+- **`$loop->depth`**: Useful when you are dealing with nested loops and want to track how deep you are in the nesting.
+- **`$loop->parent`**: Allows accessing the loop variable of the outer loop when you're in a nested loop.
+
+This table provides an overview of the different loop variables that Laravel offers in its `@foreach` directive, making iteration over collections more flexible and powerful.
