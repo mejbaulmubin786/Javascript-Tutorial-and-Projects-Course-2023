@@ -17,6 +17,3 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcomepage');
 
-Route::get('/01', function () {
-    return view('first');
-});
