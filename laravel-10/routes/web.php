@@ -17,20 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcomepage');
 
-Route::get('/home', function () {
-    return view('pages/index');
-});
+// Route::get('/home', function () {
+//     return view('pages/home');
+// });
 
-Route::get('/main', function () {
-    return view('pages/layout');
+Route::get('/about', function () {
+    return view('pages/about');
 });
 
 Route::get('/services', function () {
-    return view('services');
+    return view('pages/services');
 });
 
-Route::get('/page1', function () {
-    return view('TemplateInheritance/page1');
+Route::get('/contact', function () {
+    return view('pages/contact');
 });
 
 Route::get('/page2', function () {
