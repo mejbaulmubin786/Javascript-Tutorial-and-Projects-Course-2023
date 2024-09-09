@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Three Column Portfolio Template for Bootstrap 3</title>
+    <title>Template Practice - @yield('title', 'Website')</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -41,7 +41,7 @@
       </div><!-- /.container -->
     </nav>
 
-      @yield('content')
+    @yield('content', '<h1>No Content found</h1>')
 
     <div class="container">
 

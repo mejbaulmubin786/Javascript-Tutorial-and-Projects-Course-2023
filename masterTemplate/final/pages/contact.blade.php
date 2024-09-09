@@ -1,5 +1,9 @@
 @extends('layout.master')
 
+@section('title')
+    contact Page
+@endsection
+
 @section('content')
 <div class="container">
 
