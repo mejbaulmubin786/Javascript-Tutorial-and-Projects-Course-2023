@@ -28,3 +28,15 @@ Route::get('/contact', function () {
 Route::get('/services', function () {
     return view('services');
 });
+
+Route::get('/page1', function () {
+    return view('TemplateInheritance/page1');
+});
+
+Route::get('/page2', function () {
+    return view('TemplateInheritance/page2');
+});
+
+Route::get('/page3', function () {
+    return view('TemplateInheritance/page3');
+});
