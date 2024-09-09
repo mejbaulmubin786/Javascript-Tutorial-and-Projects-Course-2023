@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcomepage');
 
-Route::get('/information', function () {
-    return view('about');
+Route::get('/home', function () {
+    return view('pages/index');
 });
 
 Route::get('/contact', function () {
@@ -38,5 +38,5 @@ Route::get('/page2', function () {
 });
 
 Route::get('/page3', function () {
-    return view('TemplateInheritance/page3');
+    return view('pages/header');
 });
