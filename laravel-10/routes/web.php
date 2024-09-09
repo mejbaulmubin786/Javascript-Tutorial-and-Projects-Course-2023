@@ -21,8 +21,8 @@ Route::get('/home', function () {
     return view('pages/index');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/main', function () {
+    return view('pages/layout');
 });
 
 Route::get('/services', function () {
