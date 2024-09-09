@@ -17,3 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcomepage');
 
+Route::get('/ano', function () {
+    return view('one');
+});

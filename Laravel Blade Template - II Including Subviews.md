@@ -96,8 +96,35 @@ $associativeArray = array(
 @includeIf('pages.content') // তাই এর নতুন ্ এই ফাংশনটি ব্যবহার করতে হবে।
 //---------------------------------------------
 // আমরা যদি কোন ফাইল ইনক্লুড করার সাথে তার কনডিশন চেক করতে চাই যাতে কন্ডিশন ফুরপিল হলেই শুধু ফাইলটি ইনক্লুড হয় তবে।
-@includeWhen(Condition Value, 'viewfile', ['status'=>'Hello']) // তাই এর নতুন ্ এই ফাংশনটি ব্যবহার করতে হবে।
+@includeWhen(Condition Value, 'viewfile', ['status'=>'Hello']) // তাই এর নতুন ্ এই ফাংশনটি ব্যবহার করতে হবে। এর তিনটি পেরামিটার প্রথমটি কনডিশান, দ্বিতীয়টি শর্ত পুরন হলে যে ফাইল বা ভিউ এর যে ফাইল ইনক্লুড করবে শেষটা হচ্ছে ঐ ফাইলকে যদি কনো ভেলু আমরা পাঠাতে চাই। এই ফাংশনের মতো আর একটি হচ্ছে।
+@includeUnless(Condition Value, 'viewfile', ['status'=>'Hello']) //এটি হচ্ছে উপরের টির উলটো এটি শর্তটি মিথ্য হলেই কেবল ফাইলটি যুক্ত করে।
 
+//Ex:
+@php
+$indexedArray = array(
+  "Element 1", "Element 2", "Element 3", "Element 4", "Element 5",
+  "Element 6", "Element 7", "Element 8", "Element 9", "Element 10",
+  "Element 11", "Element 12", "Element 13", "Element 14", "Element 15",
+  "Element 16", "Element 17", "Element 18", "Element 19", "Element 20"
+);
+@endphp
+
+
+@includeWhen(true ,'pages.header', ['names'=>$indexedArray])
+<h1>Home page</h1>
+@include('pages.footer')
+
+//pages/header.php
+<h1>Header Page</h1>
+{{-- @foreach ($names as $key => $value )
+    <p>{{$key}}=> {{$value}} </p>
+@endforeach --}}
+
+@forelse ($names as $key => $value )
+  <p>{{$key}}=> {{$value}} </p>
+@empty
+  <p>No value found</p>
+@endforelse
 
 
 ```
