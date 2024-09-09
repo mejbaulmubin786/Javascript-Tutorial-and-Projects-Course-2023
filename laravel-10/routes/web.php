@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcomepage');
 
-Route::get('/ano', function () {
-    return view('one');
+Route::get('/information', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/services', function () {
+    return view('services');
 });

@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home - Welcome</title>
+    <title>আমাদের সম্পর্কে</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="logo">আমাদের সাইট</div>
         <ul>
-            <li><a href="{{route('welcomepage')}}">হোম</a></li>
+            <li><a href="index.html">হোম</a></li>
             <li><a href="about.html">আমাদের সম্পর্কে</a></li>
             <li><a href="services.html">সেবাসমূহ</a></li>
             <li><a href="contact.html">যোগাযোগ</a></li>
         </ul>
     </nav>
-    
-    <div class="welcome-container">
-        <h1>স্বাগতম!</h1>
-        <p>আমাদের ওয়েবসাইটে আপনাকে স্বাগতম। নিচের ফর্মটি পূরণ করে আমাদের সাথে যোগাযোগ করুন।</p>
-        <a href="#contact" class="welcome-btn">যোগাযোগ করুন</a>
+
+    <div class="content-container">
+        <h1>আমাদের সম্পর্কে</h1>
+        <p>আমরা একজন ডেডিকেটেড টিম, যা ওয়েব ডিজাইন এবং ডেভেলপমেন্টে বিশেষজ্ঞ।</p>
     </div>
 
     <footer>
@@ -32,7 +31,5 @@
             <a href="#">লিঙ্কডইন</a>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

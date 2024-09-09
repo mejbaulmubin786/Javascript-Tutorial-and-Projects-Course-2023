@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home - Welcome</title>
+    <title>যোগাযোগ</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="logo">আমাদের সাইট</div>
         <ul>
-            <li><a href="{{route('welcomepage')}}">হোম</a></li>
+            <li><a href="index.html">হোম</a></li>
             <li><a href="about.html">আমাদের সম্পর্কে</a></li>
             <li><a href="services.html">সেবাসমূহ</a></li>
             <li><a href="contact.html">যোগাযোগ</a></li>
         </ul>
     </nav>
-    
-    <div class="welcome-container">
-        <h1>স্বাগতম!</h1>
-        <p>আমাদের ওয়েবসাইটে আপনাকে স্বাগতম। নিচের ফর্মটি পূরণ করে আমাদের সাথে যোগাযোগ করুন।</p>
-        <a href="#contact" class="welcome-btn">যোগাযোগ করুন</a>
+
+    <div class="contact-form-container">
+        <h2>যোগাযোগ ফর্ম</h2>
+        <form id="contactForm">
+            <label for="name">নাম:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">ইমেইল:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">বার্তা:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="submit-btn">পাঠান</button>
+        </form>
     </div>
 
     <footer>
