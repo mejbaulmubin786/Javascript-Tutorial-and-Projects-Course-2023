@@ -41,8 +41,12 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
-
-      @yield('content', '<h1>No Content found</h1>')
+    @hasSection ('content')
+        @yield('content')
+    @else
+        <h1>No Content found</h1>
+    @endif
+     
 
     <div class="container">
 
